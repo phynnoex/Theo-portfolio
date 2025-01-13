@@ -1,0 +1,22 @@
+.skillCard p{
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0px 0px;
+  }
+  .wthSkillMeter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+    height: 90%;
+  }
+  .wthSkillMeter .logo{
+    font-size: 20px;
+  }
+  
+  .skillMeter{
+    
+    height: 3px;
+    background-color: black;
+  }
