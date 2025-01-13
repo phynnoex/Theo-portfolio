@@ -1,0 +1,22 @@
+.contactButton{
+    display: flex;
+    width: 140px;
+    height: 46px;
+    border: 1px solid white;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: #313131;
+  }
+  .contactButton div{
+    margin-right: 10px;
+    color: white;
+    font-family: inter;
+  
+  }
+  .contactButton .contactIcon{
+    font-size: 24px;
+  }
+  .contactButton .buttonText{
+    font-style: italic;
+  }

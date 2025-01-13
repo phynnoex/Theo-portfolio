@@ -1,10 +1,13 @@
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faGoogle, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import SkillCard from './components/skills/SkillCard';
+import ContactCard from './components/contactCards/ContactCard';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { faEnvelopeOpen } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -32,12 +35,9 @@ function App() {
           <div className='designText'>& <br />Designer</div>
         </div>
         <div className='heroContacts'>
-          <div className='contactButton'>
-            <div className='contactIcon'>
-              <FontAwesomeIcon icon={faGithub} />
-            </div>
-            <div className='buttonText'>Github</div>
-          </div>
+          <ContactCard ContactTitle='Github' faIcon={faGithub} />
+          <ContactCard ContactTitle='Email' faIcon={faEnvelope} />
+          <ContactCard ContactTitle='LinkedIn' faIcon={faLinkedin} />
         </div>
       </div>
       <div className='aboutSection'>
