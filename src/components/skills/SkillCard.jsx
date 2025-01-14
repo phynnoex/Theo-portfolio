@@ -14,7 +14,7 @@ export default function SkillCard(props) {
             </div>
             <div
                 className="skillMeter"
-                style={{ width: `${props.levelOfTen * 14.5}px` }} // Add % as the unit
+                style={{ width: `${props.levelOfTen * 16}px` }} // Add % as the unit
             ></div>
         </div>
     );

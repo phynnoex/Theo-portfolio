@@ -1,13 +1,15 @@
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faGoogle, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import reactLogo from './assets/react.svg'
+import reactLogo from './assets/react.svg';
+import profilePicture from './assets/profile-pic.jpg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import SkillCard from './components/skills/SkillCard';
 import ContactCard from './components/contactCards/ContactCard';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faEnvelopeOpen } from '@fortawesome/free-solid-svg-icons';
+import ProjectCard from './components/ProjectCards/ProjectCard';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -61,8 +63,15 @@ function App() {
                 </div>
               </div>
             </div>
+            <div className="rightMainAbout">
+              <div className="ImgCard">
+                <div className="profilePicture"></div>
+              </div>
+            </div>
           </div>
-            
+      </div>
+      <div className="projectsSection">
+        <ProjectCard></ProjectCard>
       </div>
     </>
   )

@@ -1,0 +1,17 @@
+.stackCard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    background-color: transparent;
+    border-radius: 30px;
+    border: 1px solid black;
+    margin-right: 20px;
+}
+
+.stackCard p{
+    font-size: 14px;
+    font-family: inter;
+    font-weight: 200;
+    padding: 0px 0px;
+}

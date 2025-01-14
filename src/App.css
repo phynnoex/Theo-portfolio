@@ -1,15 +1,14 @@
 body{
   background-color: #282828;
   margin: 0px;
-  padding: 41px 60px;
 }
 .header{
-  width: 100%;
   color: white;
   font-family: inter;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 40px 67px 0px 67px;
 }
 .logo{
   width: 20%;
@@ -54,6 +53,7 @@ ul li{
 
 /* -------- hero section ----------  */
 .heroSection{
+  margin: 1px 60px;
   padding-top: 66px;
   margin-bottom: 50px;
   height: 60vh;
@@ -93,13 +93,13 @@ ul li{
 
 /* -------- about section --------- */
 .aboutSection{
-  background-color: white;
-  width: 100%;
+  background-color: #ECECEC;
   height: 100vh;
   color: black;
   display: flex;
+  margin: 40px 67px 120px 67px;
 }
-.aboutSection .leftStyle{
+.leftStyle{
   width: 1.2%;
   height: inherit;
   display: flex;
@@ -112,8 +112,8 @@ ul li{
 .mainAbout{
   display: flex;
   padding-left: 50px;
+  padding-right: 50px;
   padding-top: 50px;
-  width: 50%;
   font-family: inter;
   height: inherit;
   
@@ -128,6 +128,7 @@ ul li{
   font-weight: 200;
 }
 .LeftMainAbout {
+  width: 50%;
   display: flex;
   flex-direction: column;
   height: 90vh;
@@ -138,16 +139,34 @@ ul li{
   flex-wrap: wrap;
   width: 100%;
 }
-.skillCard{
-  width: 147px;
-  height: 45px;
-  border: 2px solid black;
-  border-radius: 10px 10px 10px 2px;
+.rightMainAbout{
+  width: 50%;
+  padding: 20px 60px;
+  height: 80vh;
+}
+.ImgCard{
+  background-color: white;
+  border: 1px solid rgb(44, 44, 44);
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+.profilePicture{
+  width: 100%;
+  height: 80%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-image: url('./assets/profile-pic.jpg');
+  background-size: cover;
+}
+/* ---------- project Section ------------ */
+.projectsSection{
+  background-color: white;
+  height: 100vh;
+  padding: 80px 67px 41px 67px;
+  font-family: inter;
 }
 
