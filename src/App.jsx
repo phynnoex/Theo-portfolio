@@ -3,6 +3,7 @@ import './App.css';
 import ProjectCard from './components/ProjectCards/ProjectCard';
 import HeroSection from './Sections/HeroSection/HeroSection';
 import AboutSection from './Sections/AboutSection/AboutSection';
+import projects from './Data/projects';
 AboutSection
 function App() {
   const [count, setCount] = useState(0)
@@ -24,15 +25,17 @@ function App() {
           </div>
         </div>
       </div>
+      <div className="noise-overlay"></div>
       <HeroSection></HeroSection>
       <AboutSection></AboutSection>
-      <div className="projectsSection">
-        <ProjectCard 
-          projectTitle='Quiz App'
-          AppType='Mobile Application'
-          stack={['React-Native', 'Expo', 'Firebase']}
-          projectDescription='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat'
-        />
+      <div className='projectsSection'>
+        {
+          projects.map((project) => {
+            console.log(project.index)
+            return <ProjectCard key= {project.index} projectTitle={project.projectTitle} AppType={project.AppType} stack={project.stack} projectDescription={project.projectDescription} Pindex={project.index} />
+          })
+          
+        }
       </div>
     </>
   )

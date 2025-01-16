@@ -1,30 +1,10 @@
 import React from 'react';
 import SkillCard from '../../components/skills/SkillCard';
+import skills from '../../Data/skills';
 
 export default function AboutSection(props) {
 
-    const skills = [
-        {
-            skillTitle:'HTML',
-            levelOfTen:8
-        },
-        {
-            skillTitle:'CSS',
-            levelOfTen:7
-        },
-        {
-            skillTitle:'Javascript',
-            levelOfTen:6
-        },
-        {
-            skillTitle:'React',
-            levelOfTen:5
-        },
-        {
-            skillTitle:'Node',
-            levelOfTen:4
-        }
-    ]
+    
     return(
         <div className='aboutSection'>
           <div className='leftStyle'>

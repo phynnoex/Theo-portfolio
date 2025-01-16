@@ -1,6 +1,17 @@
 .projectCard{
-    margin-top: 50px;
+    margin-top: 75px;
+    margin-bottom: 75px;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.reverseProjectCard{
+    margin-top: 75px;
+    margin-bottom: 120px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
 }
 .projectInfo{
     display: flex;
@@ -39,10 +50,10 @@
 .projectDisplay{
     width: 50%;
     height: 70vh;
-    padding: 0px 30px;
-    justify-content: end;
     display: flex;
+    transform-origin: center;
 }
+
 .leftTopBox{
     width: 150px;
     height: 130px;
