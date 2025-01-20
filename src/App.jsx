@@ -4,6 +4,8 @@ import ProjectCard from './components/ProjectCards/ProjectCard';
 import HeroSection from './Sections/HeroSection/HeroSection';
 import AboutSection from './Sections/AboutSection/AboutSection';
 import projects from './Data/projects';
+import TestButton from './testButton/testButton';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 AboutSection
 function App() {
   const [count, setCount] = useState(0)
@@ -25,9 +27,11 @@ function App() {
           </div>
         </div>
       </div>
+      
       <div className="noise-overlay"></div>
       <HeroSection></HeroSection>
       <AboutSection></AboutSection>
+
       <div className='projectsSection'>
         {
           projects.map((project) => {

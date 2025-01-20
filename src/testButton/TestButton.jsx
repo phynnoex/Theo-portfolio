@@ -1,11 +1,11 @@
-import React from 'react';
-import './SkillCard.css';
+import React, { useState } from 'react';
+import { delay, easeIn, motion } from 'framer-motion';
+import './testButton.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { delay,easeIn, motion } from 'framer-motion';
-import { useState } from 'react';
 
-export default function SkillCard(props) {
+
+
+export default function TestButton(props) {
     const [hovered, setHovered] = useState(false);
 
     return (
@@ -44,12 +44,7 @@ export default function SkillCard(props) {
                         fontSize:'20px'
                     }}
                 />
-                <p
-                    style={{
-                        fontSize: '15px',
-                        fontWeight: '300',
-                    }}
-                >{props.title}</p>
+                {props.title}
             </motion.div>
         </motion.div>
     );

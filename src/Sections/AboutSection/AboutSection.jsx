@@ -21,7 +21,7 @@ export default function AboutSection(props) {
                 <div className='skills'>
                     {
                         skills.map((skill) => {
-                            return <SkillCard  skillTitle={skill.skillTitle} levelOfTen={skill.levelOfTen}/>
+                            return <SkillCard  title={skill.skillTitle} width={skill.levelOfTen/10} icon={skill.icon}/>
                         })
                     }
                 </div>
