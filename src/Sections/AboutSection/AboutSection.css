@@ -1,0 +1,105 @@
+ /* -------- about section --------- */
+ .aboutSection{
+    background-color: #ECECEC;
+    height: 100vh;
+    color: black;
+    display: flex;
+    margin: 40px 67px 120px 67px;
+  }
+  .leftStyle{
+    width: 1.2%;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+  }
+  .leftBar{
+    width: 70%;
+    background-color: #454545;
+  }
+  .mainAbout{
+    display: flex;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    font-family: inter;
+    height: inherit;
+    
+  }
+  .aboutTitle{
+    font-size: 32px;
+    font-weight: 600;
+    font-style: italic;
+  }
+  .mainAbout p{
+    font-size: 20px;
+    font-weight: 200;
+  }
+  .LeftMainAbout {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    justify-content: space-between;
+  }
+  .skills{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .rightMainAbout{
+    width: 50%;
+    padding: 20px 60px;
+    height: 80vh;
+  }
+  .ImgCard{
+    background-color: white;
+    border: 1px solid rgb(44, 44, 44);
+    border-radius: 30px;
+    height: 100%;
+    padding: 10px;
+  }
+  .profilePicture{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-image: url('../../assets/profile-pic.jpg');
+    background-size: cover;
+  }
+
+  /* mobile */
+    @media screen and (max-width: 768px){
+        .aboutSection{
+            margin: 20px;
+            margin-top: 90px;
+            height: max-content;
+            padding: 10px;
+        }
+        .leftStyle{
+            display: none !important;
+        }
+        .mainAbout{
+            flex-direction: column;
+            padding: 10px;
+        }
+        .LeftMainAbout{
+            width: 100%;
+            flex-direction: column;
+            padding: 0px;
+        }
+        .rightMainAbout{
+          width: 100%;
+          padding: 0px;
+          height: max-content;
+        }
+        .ImgCard{
+          padding: 10px;
+          height: 50vh;
+        }
+        .profilePicture{
+          
+        }
+        
+    }

@@ -31,7 +31,7 @@ export default function ProjectCard(props) {  // This runs whenever 'coordinates
         </div>
         <motion.div
           className="projectDisplay"
-          initial={(props.Pindex % 2 === 1) ? { x: 150, opacity: 0.3, perspective:500, skewY: -10, boxShadow: 10, } : { x: -120, opacity: 0, perspective:500, skewY: 10 }}
+          initial={(props.Pindex % 2 === 1) ? { x: -120, opacity: 0.3, perspective:500, skewY: 10,  } : { x: 120, opacity: 0.3, perspective:500, skewY: -10 , }}
           whileInView={(props.Pindex % 2 === 1) ? {x: 0, opacity: 1, perspective:500, skewY:0} : {x: 0, opacity: 1,  perspective:500, skewY:0}}
           transition={{ duration: 0.5 }}
         >

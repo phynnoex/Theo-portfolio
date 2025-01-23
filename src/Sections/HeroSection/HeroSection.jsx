@@ -2,6 +2,7 @@ import ContactCard from "../../components/contactCards/ContactCard";
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faGithub, faGoogle, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import React from 'react';
+import './HeroSection.css';
 
 export default function HeroSection() {
     return (

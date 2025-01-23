@@ -48,7 +48,6 @@
     width: max-content;
 }
 .projectDisplay{
-    width: 50%;
     height: 70vh;
     display: flex;
     transform-origin: center;

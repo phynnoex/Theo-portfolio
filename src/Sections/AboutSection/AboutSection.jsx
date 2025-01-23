@@ -1,6 +1,7 @@
 import React from 'react';
 import SkillCard from '../../components/skills/SkillCard';
 import skills from '../../Data/skills';
+import './AboutSection.css';
 
 export default function AboutSection(props) {
 

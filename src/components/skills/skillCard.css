@@ -9,7 +9,7 @@
   cursor: pointer;
   border: 2px solid black;
   overflow: clip;
-  margin-right: 20px;
+  margin-right: 10px;
   margin-bottom: 20px;
 }
 .boxTile{
@@ -27,5 +27,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* mobile */
+@media screen and (max-width: 768px){
+
+  .testButton{
+    width: 140px;
+  }
+  .boxTile{
+    background-color: rgb(49, 49, 49);
+    width: 140px;
+    height: 7px;
+    position: absolute;
+  }
+  .boxContent{
+    width: inherit;
+    color: white;
+    font-size: 12px !important;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
 }
 
