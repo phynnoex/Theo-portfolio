@@ -14,7 +14,7 @@ function App() {
     <>
       <NavSection/>
       <div className="noise-overlay"></div>
-      <BalloonSection></BalloonSection>
+      {/* <BalloonSection></BalloonSection> */}
       <HeroSection></HeroSection>
       <AboutSection></AboutSection>
 
