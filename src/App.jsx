@@ -3,7 +3,10 @@ import './App.css';
 import HeroSection from './Sections/HeroSection/HeroSection';
 import NavSection from './Sections/NavSection/navSection';
 import AboutSection from './Sections/AboutSection/ABOUTsECTION.JSX';
-AboutSection
+import projects from './Data/projects';
+import ProjectCard from './components/ProjectCards/ProjectCard';
+import BalloonSection from './Sections/Balloons3d/BalloonSection';
+
 function App() {
   const [count, setCount] = useState(0)
   
@@ -11,6 +14,7 @@ function App() {
     <>
       <NavSection/>
       <div className="noise-overlay"></div>
+      <BalloonSection></BalloonSection>
       <HeroSection></HeroSection>
       <AboutSection></AboutSection>
 
