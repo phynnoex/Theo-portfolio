@@ -18,7 +18,7 @@ function App() {
       <HeroSection></HeroSection>
       <AboutSection></AboutSection>
 
-      {/* <div className='projectsSection'>
+      <div className='projectsSection'>
         {
           projects.map((project) => {
             console.log(project.index)
@@ -26,7 +26,7 @@ function App() {
           })
           
         }
-      </div> */}
+      </div>
     </>
   )
 }
