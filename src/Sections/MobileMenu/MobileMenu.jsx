@@ -10,19 +10,36 @@ export default function MobileMenu({checkMenuClicked, setCheckMenuClicked}) {
         setCheckMenuClicked(!checkMenuClicked);
       };
     return(
-        <div className="MobileMenu">
+        <motion.div
+        
+        className="MobileMenu">
             <motion.div className="menuCircle"
                 animate={{
                     scale: checkMenuClicked ? [0, 100] : [100, 0],
                     
                 }}
                 transition={{
-                    duration: 2,
+                    duration: 1,
                 }}
+                exit={{scale: [100, 0]}}
             >
                 
             </motion.div>
-            <div className="menuItems">
+            <motion.div className="menuItems" 
+                animate={{
+                    x: checkMenuClicked ? [1000, 0] : [0, 1000],
+                }}
+                transition={
+                    {
+                        duration: 0.5,
+                        delay: 0,
+                        bounce: 0.5,
+                }
+                
+            }
+            exit={{x: [0, 1000]}}
+            
+            >
                 <div className='Heading'>
                     <div className='nameLogo'>BANKOLE <br />THEOPHILUS</div>
                     <div className='Xicon' onClick={handleMenuClick}><FontAwesomeIcon  icon={faX}/></div>
@@ -36,7 +53,7 @@ export default function MobileMenu({checkMenuClicked, setCheckMenuClicked}) {
                 </div>
                 <div className='randomText'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet dolorum dolore .</div>
                 <div className='footer'>COPYRIGHT @ 2025</div>
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     )
 }

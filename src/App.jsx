@@ -7,6 +7,7 @@ import projects from './Data/projects';
 import ProjectCard from './components/ProjectCards/ProjectCard';
 import BalloonSection from './Sections/Balloons3d/BalloonSection';
 import MobileMenu from './Sections/MobileMenu/MobileMenu';
+import { AnimatePresence } from 'framer-motion';
 
 
 function App() {
@@ -27,7 +28,9 @@ function App() {
 
   return (
     <>
+    <AnimatePresence>
       {checkMenuClicked && <MobileMenu checkMenuClicked={checkMenuClicked} setCheckMenuClicked={setCheckMenuClicked}/>}
+    </AnimatePresence>
       <NavSection checkMenuClicked={checkMenuClicked} setCheckMenuClicked={setCheckMenuClicked}/>
       <div className="noise-overlay"></div>
       {/* <BalloonSection></BalloonSection> */}
