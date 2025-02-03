@@ -20,5 +20,10 @@ body{
   body{
     width: 100vw;
   }
+  .projectsSection{
+    background-color: #ECECEC;
+    padding: 30px;
+    font-family: inter;
+  }
 }
 

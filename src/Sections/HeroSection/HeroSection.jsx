@@ -1,11 +1,13 @@
 import ContactCard from "../../components/contactCards/ContactCard";
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faGithub, faGoogle, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import React from 'react';
+import React, { useState } from 'react';
 import './HeroSection.css';
 
 export default function HeroSection() {
+  const [checkMenuClicked, setCheckMenuClicked] = useState(false);
     return (
+      
         <div className='heroSection'>
             <div className='heroText'>
               <div className='devText'>FRONTEND DEVELOPER</div>
@@ -16,6 +18,7 @@ export default function HeroSection() {
               <ContactCard ContactTitle='Email' faIcon={faEnvelope} />
               <ContactCard ContactTitle='LinkedIn' faIcon={faLinkedin} />
             </div>
-      </div>
+        </div>
+      
     )
 }

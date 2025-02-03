@@ -14,6 +14,18 @@ export default function ProjectCard(props) {  // This runs whenever 'coordinates
             <h2>{props.projectTitle}</h2>
             <p>{props.AppType}</p>
           </div>
+
+          <motion.div
+          className="projectdDisplay"
+          
+          >
+          <div>
+            <div className="leftTopBox"></div>
+            <div className="mainBox"></div>
+            <div className="bottomRightBox"></div>
+          </div>
+          </motion.div>
+
           <div className="projectDescription">
             <div className="stackCards">
               {props.stack.map((stackTitle, index) => {

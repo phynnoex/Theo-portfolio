@@ -1,0 +1,65 @@
+.MobileMenu{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(36, 36, 36);
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: clip;
+}
+.menuCircle{
+    position: absolute;
+    top: 0;
+    left: 350px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    transform-origin: center;
+}
+.menuItems{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90vw;
+    padding: 20px;
+    font-family: inter;
+    height: 90vh;
+
+
+}
+.Xicon{
+    font-weight: 200;
+    font-size: 30px;
+}
+.nameLogo{
+    font-weight: 500;
+}
+.Heading{
+    display: flex;
+    width: 90vw;
+    justify-content: space-between
+}
+.menuList{
+    margin-top: 10vh;
+    
+}
+.menuList ul{
+    list-style-type: none;
+    padding: 0px;
+    
+}
+.menuList ul li{
+    font-size: 50px;
+    font-family: inter;
+    border-bottom: 2px solid black;
+    font-style: italic;
+
+}
+.randomText{
+    text-align: center;
+}
+.footer{
+    text-align: center;
+}

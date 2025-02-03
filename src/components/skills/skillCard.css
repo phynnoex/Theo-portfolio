@@ -34,6 +34,7 @@
 
   .testButton{
     width: 140px;
+    margin-right: 10px;
   }
   .boxTile{
     background-color: rgb(49, 49, 49);

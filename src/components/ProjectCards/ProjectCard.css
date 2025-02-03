@@ -52,6 +52,11 @@
     display: flex;
     transform-origin: center;
 }
+.projectdDisplay{
+    height: 70vh;
+    transform-origin: center;
+    display: none;
+}
 
 .leftTopBox{
     width: 150px;
@@ -81,4 +86,62 @@
     position: relative;
     border-radius: 20px;
 }
-
+/* mobile */
+@media screen and (max-width: 768px){
+    .projectCard{
+        margin-top: 35px;
+        margin-bottom: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .projectInfo{
+        width: 100%;
+        height: max-content;
+    }
+    .projectDisplay{
+        height: 70vh;
+        display: none;
+        transform-origin: center;
+    }
+    .projectdDisplay{
+        margin-top: 20px;
+        display: flex;
+        transform-origin: center;
+        height: max-content;
+        margin-bottom: 20px;
+    }
+    .leftTopBox{
+        width: 107px;
+        height: 96px;
+        background-color: #8B8B8B;
+        z-index: 2;
+        position: relative;
+        border-radius: 20px;
+    }
+    .mainBox{
+        margin-top: -60px;
+        margin-left: 25px;
+        width: 275px;
+        height: 241px;
+        z-index: 1;
+        background-color: #D9D9D9;
+        position: relative;
+        border-radius: 30px;
+    }
+    .bottomRightBox{
+        margin-top: -90px;
+        width: 164px;
+        margin-left: 170px;
+        height: 127px;
+        background-color: #F8F8F8;
+        z-index: 3;
+        position: relative;
+        border-radius: 20px;
+    }
+    .stackCards{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}

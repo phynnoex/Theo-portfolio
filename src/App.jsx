@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import HeroSection from './Sections/HeroSection/HeroSection';
 import NavSection from './Sections/NavSection/navSection';
@@ -6,13 +6,29 @@ import AboutSection from './Sections/AboutSection/ABOUTsECTION.JSX';
 import projects from './Data/projects';
 import ProjectCard from './components/ProjectCards/ProjectCard';
 import BalloonSection from './Sections/Balloons3d/BalloonSection';
+import MobileMenu from './Sections/MobileMenu/MobileMenu';
+
 
 function App() {
   const [count, setCount] = useState(0)
+  const [checkMenuClicked, setCheckMenuClicked] = useState(false)
   
+  useEffect(() => {
+    if (checkMenuClicked) {
+      document.body.style.overflow = "hidden"; // Disable scrolling
+    } else {
+      document.body.style.overflow = "auto"; // Enable scrolling
+    }
+
+    return () => {
+      document.body.style.overflow = "auto"; // Reset when component unmounts
+    };
+  }, [checkMenuClicked]);
+
   return (
     <>
-      <NavSection/>
+      {checkMenuClicked && <MobileMenu checkMenuClicked={checkMenuClicked} setCheckMenuClicked={setCheckMenuClicked}/>}
+      <NavSection checkMenuClicked={checkMenuClicked} setCheckMenuClicked={setCheckMenuClicked}/>
       <div className="noise-overlay"></div>
       {/* <BalloonSection></BalloonSection> */}
       <HeroSection></HeroSection>

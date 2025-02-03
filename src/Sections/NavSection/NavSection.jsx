@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./navSection.css";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function NavSection() {
+export default function NavSection({ checkMenuClicked, setCheckMenuClicked }) {
+  
+  const handleMenuClick = () => {
+    setCheckMenuClicked(!checkMenuClicked);
+  };
+  
   return (
     <div className="header">
       <div className="logo">
@@ -21,7 +26,7 @@ export default function NavSection() {
           <div className="toggleBall"></div>
         </div>
       </div>
-      <div className="menu-icon">
+      <div className="menu-icon" onClick={handleMenuClick}>
         <FontAwesomeIcon icon={faBars}  
         />
       </div>
