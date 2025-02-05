@@ -1,0 +1,85 @@
+.footerSection {
+  background-color: rgb(42, 42, 42);
+  height: 70vh;
+  width: 100%;
+  padding-top: 50px;
+  padding-top: 100px;
+  font-family: inter;
+  color: rgb(190, 190, 190);
+}
+.contentContainer {
+  display: flex;
+  padding: 0px 67px;
+}
+.leftFooter {
+    width: 50%;
+}
+.rightFooter {
+    width: 50%;
+}
+.inputField{
+    background-color: transparent;
+    height: 50px;
+    width: 70%;
+    border: 0px;
+    border-bottom: 1px solid rgb(190, 190, 190);
+    color: rgb(190, 190, 190);
+    padding: 0px 10px;
+    font-size: 15px;
+}
+.inputField :focus{
+    outline: none;
+    border: none;
+}
+.emailField{
+  font-size: 15px;
+  padding-top: 10px;
+  font-family: inter;
+  height: 150px;
+}
+.submitBtn{
+  background-color: rgb(216, 216, 216);
+  border: none;
+  box-sizing: border-box;
+  width: 72%;
+  height: 60px;
+  padding: 0px 10px;
+  font-family: inter;
+  font-size: 15px;
+}
+
+/* mobile */
+
+@media screen and (max-width: 768px){
+  .footerSection{
+    padding-top: 50px;
+  }
+  .contentContainer{
+    display: block;
+    padding: 0px 30px;
+  }
+  .leftFooter{
+    display: none;
+  }
+  .rightFooter{
+    width: 100%;
+  }
+  .inputField{
+    width: 90%;
+    height: 60px;
+  }
+  .submitBtn{
+    width: 95%;
+
+  }
+  .emailField{
+    height: 100px;
+  }
+  .copyright{
+    padding-top: 50px;
+    font: 20px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+ 
+}

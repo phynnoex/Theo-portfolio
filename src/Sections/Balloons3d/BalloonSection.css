@@ -3,22 +3,7 @@
     top: 120px;
     left: 65px;
     width: 90vw;
-    height: 60vh;
-    background-image: url(../../assets/noiseTexture2.png);
-    background-size: 100%;
-    mix-blend-mode: screen;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
-    border: 1px solid transparent; /* Transparent border */
-    border-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(214, 214, 214, 0.3)) 1;
-    backdrop-filter: blur(15px)
+    height: 70vh;
+
 }
 
-/* mobile */
-@media screen and (max-width: 600px){
-    .balloonSection{
-        top: 80px;
-        left: 30px;
-        width: 80vw;
-        height: 60vh;
-    }
-}

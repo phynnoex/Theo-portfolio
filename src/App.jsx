@@ -8,6 +8,7 @@ import ProjectCard from './components/ProjectCards/ProjectCard';
 import BalloonSection from './Sections/Balloons3d/BalloonSection';
 import MobileMenu from './Sections/MobileMenu/MobileMenu';
 import { AnimatePresence } from 'framer-motion';
+import FooterSection from './Sections/FooterSection/FooterSection';
 
 
 function App() {
@@ -46,6 +47,8 @@ function App() {
           
         }
       </div>
+      
+      <FooterSection/>
     </>
   )
 }
