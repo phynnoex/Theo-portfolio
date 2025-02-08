@@ -33,8 +33,9 @@ function App() {
       {checkMenuClicked && <MobileMenu checkMenuClicked={checkMenuClicked} setCheckMenuClicked={setCheckMenuClicked}/>}
     </AnimatePresence>
       <NavSection checkMenuClicked={checkMenuClicked} setCheckMenuClicked={setCheckMenuClicked}/>
+      <BalloonSection></BalloonSection>
       <div className="noise-overlay"></div>
-      {/* <BalloonSection></BalloonSection> */}
+      
       <HeroSection></HeroSection>
       <AboutSection></AboutSection>
 

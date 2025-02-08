@@ -1,9 +1,24 @@
-.balloonSection{
-    position: absolute;
-    top: 120px;
-    left: 65px;
-    width: 90vw;
-    height: 70vh;
 
-}
+    .balloonSection {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 94vh;
+        top: 0px;
+        z-index: -1;
+        
+    }
+
+    .balloonSection canvas {
+        pointer-events: auto; /* Keeps interactions inside the canvas working */
+    }
+
+
+    /* mobile */
+    @media screen and (max-width: 768px) {
+        .balloonSection {
+            display: none;
+            
+        }
+    }
 
