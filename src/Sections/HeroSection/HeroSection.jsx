@@ -14,9 +14,9 @@ export default function HeroSection() {
               <div className='designText'>& <br />Designer</div>
             </div>
             <div className='heroContacts'>
-              <ContactCard ContactTitle='Github' faIcon={faGithub} />
-              <ContactCard ContactTitle='Email' faIcon={faEnvelope} />
-              <ContactCard ContactTitle='LinkedIn' faIcon={faLinkedin} />
+              <ContactCard ContactTitle='Github' faIcon={faGithub} contactLink={"https://github.com/phynnoex"}/>
+              <ContactCard ContactTitle='Email' faIcon={faEnvelope} contactLink={"bankoletheophilus@gmail.com"}/>
+              <ContactCard ContactTitle='LinkedIn' faIcon={faLinkedin} contactLink = {"https://www.linkedin.com/in/phoenix-theophilus-7b3781203/"}/>
             </div>
         </div>
       

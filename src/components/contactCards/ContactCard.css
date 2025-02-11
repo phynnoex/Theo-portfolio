@@ -9,7 +9,9 @@
     align-items: center;
     background-color: rgba(37, 37, 37,0.1);
     backdrop-filter: blur(10px);
+    cursor: pointer;
   }
+  
   .contactButton div{
     margin-right: 10px;
     color: white;
