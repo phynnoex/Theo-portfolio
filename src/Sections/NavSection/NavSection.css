@@ -16,6 +16,11 @@
     width: 20%;
     font-size: 16px;
     text-align: left;
+    font-family: "neighbor", sans-serif;
+    font-style: normal;
+    
+    font-weight: 400;
+
   }
   .menu-icon{
     display: none;
@@ -46,9 +51,10 @@
   }
   ul li{
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 12px;
     transition: transform 0.3s ease, color 0.3s ease;
     transform-origin: center;
+    font-weight: 200;
   }
   ul li:hover{
     transform: perspective(500px) rotateX(5deg) skewY(-10deg);

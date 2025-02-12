@@ -12,13 +12,13 @@ export default function NavSection({ checkMenuClicked, setCheckMenuClicked }) {
   return (
     <div className="header">
       <div className="logo">
-        BANKOLE <br /> THEOPHILUS
+        BANKOLE. <br /> THEOPHILUS
       </div>
       <div className="menus">
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Services</li>
+          <li>ABOUT</li>
+          <li>PROJECT</li>
+          <li>CONTACT</li>
         </ul>
       </div>
       <div className="toggleLight">

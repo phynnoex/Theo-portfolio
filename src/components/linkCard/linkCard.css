@@ -1,14 +1,14 @@
 .LinkbuttonPrimary{
-    width: 120px;
+    width: 150px;
     padding: 0px 20px;
     display: flex;
     background-color: rgb(48, 48, 48);
-    color: white;
     justify-content: space-between;
     align-items: center;
     height: 45px;
     border-radius: 30px;
     margin-right: 20px;
+    cursor: pointer;
 }
 .arrow{
     font-weight: 100;
@@ -17,16 +17,16 @@
     font-size: 22px;
 }
 .LinkbuttonSecondary{
-    width: 120px;
+    width: 150px;
     padding: 0px 20px;
     display: flex;
     background-color: transparent;
-    color: black;
     justify-content: space-between;
     align-items: center;
     height: 45px;
     border-radius: 30px;
     border: 1px solid black;
+    cursor: pointer;
 }
 .linkTitle{
     font-size: 16px;

@@ -68,6 +68,14 @@
     background-image: url('../../assets/profile-pic.jpg');
     background-size: cover;
   }
+  .randomQuotes{
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 300;
+    margin: 20px 20px;
+    color: #454545;
+
+  }
 
   /* mobile */
     @media screen and (max-width: 768px){

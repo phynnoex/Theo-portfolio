@@ -14,13 +14,13 @@ export default function ContactCard(props) {
         onHoverStart={() => setButtonHover(true)}
         onHoverEnd={() => setButtonHover(false)}    
         animate={{
-            backgroundColor: buttonHover ? "white" : "transparent",
+            backgroundColor: buttonHover ? "rgba(242,242,242,0.2)" : "transparent",
             boxShadow: buttonHover ? "0px 0px 3px black" : "none",
         }}
         >
             <motion.div className='contactIcon'
             animate={{
-                color: buttonHover ? "black" : "#f2f2f2",
+                // color: buttonHover ? "black" : "#f2f2f2",
                 y: buttonHover ? [10, 0] : 0,
                 borderColor: buttonHover ? "black" : "white",
                 
@@ -30,7 +30,7 @@ export default function ContactCard(props) {
             </motion.div>
             <motion.div className='buttonText'
                 animate={{
-                    color: buttonHover ? "black" : "white",
+                    // color: buttonHover ? "black" : "white",
                     
                 }}
             >{props.ContactTitle}</motion.div>

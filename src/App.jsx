@@ -43,7 +43,7 @@ function App() {
         {
           projects.map((project) => {
             console.log(project.index)
-            return <ProjectCard key= {project.index} projectTitle={project.projectTitle} AppType={project.AppType} stack={project.stack} projectDescription={project.projectDescription} Pindex={project.index} />
+            return <ProjectCard key= {project.index} projectTitle={project.projectTitle} AppType={project.AppType} stack={project.stack} projectDescription={project.projectDescription} Pindex={project.index} githubLink={project.githublink} siteLink={project.siteLink}/>
           })
           
         }
