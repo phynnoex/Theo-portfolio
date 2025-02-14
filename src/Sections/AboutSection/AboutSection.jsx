@@ -1,7 +1,7 @@
 import React from 'react';
 import SkillCard from '../../components/skills/SkillCard';
 import skills from '../../Data/skills';
-import { motion,useScroll } from 'framer-motion';
+import { color, motion,useScroll } from 'framer-motion';
 import './AboutSection.css';
 
 export default function AboutSection(props) {
@@ -59,7 +59,7 @@ export default function AboutSection(props) {
             <div className="rightMainAbout">
               <div className="ImgCard">
                 <div className="profilePicture"></div>
-                <div className='randomQuotes'> "Lorem ipsum dolor sit amet, consectetur adipisicing elit."  #randomquotes</div>
+                <div className='randomQuotes'> "Lorem ipsum dolor sit amet, consectetur adipisicing elit."  <span style={{color: "blue"}}>#randomquotes</span></div>
               </div>
             </div>
           </motion.div>
