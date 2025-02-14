@@ -1,6 +1,6 @@
 .footerSection {
   background-color: rgb(42, 42, 42);
-  height: 70vh;
+  height: max-content;
   width: 100%;
   padding-top: 50px;
   padding-top: 100px;
@@ -46,6 +46,11 @@
   padding: 0px 10px;
   font-family: inter;
   font-size: 15px;
+}
+.copyright{
+  width: 100%;
+  text-align: center;
+  padding: 50px 0px;
 }
 
 /* mobile */
