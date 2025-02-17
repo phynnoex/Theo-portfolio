@@ -4,6 +4,7 @@ import StackCard from '../StackCards/StackCard';
 import LinkCard from '../linkCard/linkCard';
 import {motion, stagger} from 'framer-motion';
 
+
 export default function ProjectCard(props) {  // This runs whenever 'coordinates' changes
   const containerVariants = {
     hidden:{
@@ -46,10 +47,8 @@ export default function ProjectCard(props) {  // This runs whenever 'coordinates
           className="projectdDisplay"
           variants={itemVariants}
           >
-          <div>
-            <div className="leftTopBox"></div>
-            <div className="mainBox"></div>
-            <div className="bottomRightBox"></div>
+          <div className='imageContainer'>
+            <img src={props.displayImage} alt="" />
           </div>
           </motion.div>
 
@@ -75,10 +74,8 @@ export default function ProjectCard(props) {  // This runs whenever 'coordinates
           transition={{ duration: 0.5 }}
           viewport={{once: true, amount: 0.3}}
         >
-          <div>
-            <div className="leftTopBox"></div>
-            <div className="mainBox"></div>
-            <div className="bottomRightBox"></div>
+          <div className='imageContainer'>
+            <img src={props.displayImage} alt="" />
           </div>
         </motion.div>
       </div>
