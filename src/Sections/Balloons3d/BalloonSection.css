@@ -6,12 +6,11 @@
         height: 94vh;
         top: 0px;
         z-index: -1;
+        opacity: 0.5
         
     }
 
-    .balloonSection canvas {
-        pointer-events: auto; /* Keeps interactions inside the canvas working */
-    }
+    
 
 
     /* mobile */

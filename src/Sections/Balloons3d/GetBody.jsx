@@ -39,7 +39,7 @@ const BodyComponent = () => {
     <RigidBody ref={theBodyRef} density={density} position={[x, y, z]} restitution={0.5}>
       <Sphere args={[size, 32, 32]}>
       <meshPhysicalMaterial
-        transmission={0.9}
+        transmission={1}
         opacity={1}
         roughness={0.1}
         metalness={0.1}
@@ -48,7 +48,7 @@ const BodyComponent = () => {
         // thickness={0.1}
         clearcoat={1}
         clearcoatRoughness={0}
-        color="pink"
+        color={"white"}
       />
       </Sphere>
     </RigidBody>

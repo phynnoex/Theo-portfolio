@@ -34,7 +34,7 @@ function App() {
     </AnimatePresence>
       <NavSection checkMenuClicked={checkMenuClicked} setCheckMenuClicked={setCheckMenuClicked}/>
       <BalloonSection></BalloonSection>
-      <div className="noise-overlay"></div>
+      {/* <div className="noise-overlay"></div> */}
       
       <HeroSection></HeroSection>
       <AboutSection></AboutSection>

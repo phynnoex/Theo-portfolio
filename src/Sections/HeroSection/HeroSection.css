@@ -1,8 +1,25 @@
 .heroSection{
+  position: relative;
     margin: 0px 60px;
     padding-top: 66px;
     margin-bottom: 5vh;
     height: 70vh;
+    width: 100vw;
+  }
+  .heroSection::after{
+    z-index: -2;
+    top: 120%; /* Adjust as needed */
+    left: 50%; /* Adjust as needed */
+    transform: translate(-50%, -50%);
+    content: "";
+    width: 1000px;
+    height: 900px;
+    background: radial-gradient(ellipse, white 10%, #265733 31%, #1A2654 80%);
+
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(70px);
+    
   }
   
   .heroText{
@@ -19,7 +36,52 @@
     font-weight: 900;
     line-height: 80px;
     /* font-style: italic; */
+    position: relative;
+    
 
+  }
+  .devText::after{
+    content: "< R3F.js />";
+    font-family: inter;
+    position: absolute;
+    height: 10px;
+    background-color: yellow;
+    width: 121px;
+    height: 40px;
+    background: linear-gradient(90deg, #596D29, #77DF96);
+    border-radius: 30px;
+    top: -21px;
+    left: 28vw;
+    font-size: 12px;
+    text-align: center;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid;
+    transform: rotateZ(10deg);
+  }
+  .devText::before{
+    content: "< React />";
+    font-family: inter;
+    position: absolute;
+    height: 10px;
+    background-color: yellow;
+    width: 121px;
+    height: 40px;
+    background: linear-gradient(90deg, #3C6586, #77B0DF);
+    border-radius: 30px;
+    top: 130px;
+    left: 3vw;
+    font-size: 12px;
+    text-align: center;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid;
+    transform: rotateZ(-10deg);
+    
   }
   .heroText .designText{
     height: inherit;
@@ -46,10 +108,15 @@
   /* mobileView */
     @media screen and (max-width: 768px){
         .heroSection{
-            margin: 1px 30px;
-            padding-top: 66px;
-            margin-bottom: 50px;
-            height: 70vh;
+            width: 100%;
+            position: relative;
+            margin: 0px;
+            padding: 60px 0px 0px 20px;
+            
+          }
+          .heroSection::after{
+            width: 100%;
+            
           }
           .heroText{
             flex-direction: column;
@@ -58,7 +125,17 @@
             width: 100%;
             font-size: 56px;
             font-weight: 900;
-            line-height: 44px;
+            line-height: 50px;
+          }
+          .devText::after{
+            left: 50vw;
+            top: -30px;
+            width: 100px;
+          }
+          .devText::before{
+            left: 4vw;
+            top: 90px;
+            width: 100px;
           }
           .heroText .designText{
             display: flex;

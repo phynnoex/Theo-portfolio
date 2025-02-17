@@ -6,6 +6,7 @@
     top: 0;
     left: 0;
     overflow: clip;
+    z-index: 1000;
 }
 .menuCircle{
     position: absolute;
