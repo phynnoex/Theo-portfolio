@@ -46,7 +46,7 @@ export default function MobileMenu({checkMenuClicked, setCheckMenuClicked}) {
                 </div>
                 <div className='menuList'>
                     <ul>
-                        <li>Hello</li>
+                        <li>Home</li>
                         <li>Projects</li>
                         <li>Contacts</li>
                     </ul>
