@@ -5,13 +5,35 @@
     color: black;
     display: flex;
     margin: 40px 67px 120px 67px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 3px solid rgba(14, 14, 14, 0.1);
+    
+  }
+  .aboutSection::after{
+    
+    top: 90%; /* Adjust as needed */
+    left: 100%; /* Adjust as needed */
+    transform: translate(-50%, -50%);
+    content: "";
+    width: 1200px;
+    height: 900px;
+    background: radial-gradient(ellipse, white 0%, #265733 51%, #c5c5c5 80%);
+    opacity: 0.7;
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(70px);
+    -webkit-mask-image: inherit;
+    mask-image: inherit; /* Inherits mask from parent */
     
   }
   .leftStyle{
-    width: 1.2%;
+    width: 2%;
     height: inherit;
     display: flex;
     justify-content: center;
+    z-index: 1;
   }
   .leftBar{
     width: 70%;
@@ -24,6 +46,7 @@
     padding-top: 50px;
     font-family: inter;
     height: inherit;
+    z-index: 1;
     
   }
   .aboutTitle{
@@ -53,11 +76,13 @@
     height: 80vh;
   }
   .ImgCard{
-    background-color: white;
-    border: 1px solid rgb(44, 44, 44);
+    background-color: rgba(245, 245, 245, 0.3);
+    border: 2px solid rgba(14, 14, 14, 0.1);
     border-radius: 30px;
     height: 100%;
     padding: 10px;
+    box-shadow: 0px 4px 50px rgba(14, 14, 14, 0.25);
+    backdrop-filter: blur(10px);
   }
   .profilePicture{
     width: 100%;
