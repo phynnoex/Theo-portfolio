@@ -3,6 +3,9 @@ import SkillCard from '../../components/skills/SkillCard';
 import skills from '../../Data/skills';
 import { color, motion,useScroll } from 'framer-motion';
 import './AboutSection.css';
+import Description from '../../Data/AboutMeText';
+import AboutTextParagraph from './AboutTextParagraph';
+
 
 export default function AboutSection(props) {
     const containerVariants = {
@@ -43,7 +46,7 @@ export default function AboutSection(props) {
             viewport={{once: true, amount: 0.3}}>
               <motion.div className='topMainAbout' variants={itemVariants}>
                 <h2 className='aboutTitle'>About me 🦖</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                <AboutTextParagraph />
               </motion.div>   
               <motion.div className='bottomMainAbout' variants={itemVariants}>
                 <h3>Skills</h3>
