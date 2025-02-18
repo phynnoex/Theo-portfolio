@@ -62,7 +62,7 @@ export default function AboutSection(props) {
             <div className="rightMainAbout">
               <div className="ImgCard">
                 <div className="profilePicture"></div>
-                <div className='randomQuotes'> "Lorem ipsum dolor sit amet, consectetur adipisicing elit."  <span style={{color: "blue"}}>#randomquotes</span></div>
+                <div className='randomQuotes'> "There is a reason a goat doesn't eat meat, its because a banana cannot swallow an Ostrich"  <span style={{color: "blue"}}>#randomquotes</span></div>
               </div>
             </div>
           </motion.div>
