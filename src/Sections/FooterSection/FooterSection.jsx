@@ -1,32 +1,23 @@
 import React from 'react';
 import './FooterSection.css'
+import ContactForm from '../../components/ContactForm';
 
 export default function FooterSection(params) {
+
+    const handleSubmit = () => {
+        if(formRef.current){
+            console.log(formRef.current)
+            formRef.current.submit();
+        }
+    };
     return(
         <div className='footerSection'>
             <div className="contentContainer">
                 <div className="leftFooter"></div>
                 <div className="rightFooter">
                     <h2>../Contact me</h2>
-                    <form action="">
-                        <input type="text" 
-                            placeholder="Email" 
-                            className="inputField"
-                            
-                        />
-                        <input type="email" 
-                            placeholder="Title" 
-                            className="inputField"
-                        />
-                        <textarea 
-                            name='message'
-                            rows="4"
-                            placeholder="Message"
-                            className="inputField emailField"
-                        />
-                        <br />
-                        <input type='submit' className='submitBtn' />
-                    </form>
+                    <ContactForm />
+                    
                 </div>
             </div>
             <div className="copyright">
