@@ -1,0 +1,15 @@
+/* ---------- project Section ------------ */
+.projectsSection{
+  background-color: #ECECEC;
+  padding: 80px 67px 41px 67px;
+  font-family: inter;
+}
+
+/* mobile */
+@media screen and (max-width: 768px){
+  .projectsSection{
+    background-color: #ECECEC;
+    padding: 30px;
+    font-family: inter;
+  }
+}

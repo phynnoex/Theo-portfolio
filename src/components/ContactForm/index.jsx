@@ -1,11 +1,10 @@
 import { forwardRef, useRef, useState } from "react";
 import "./styles.css";
-import emailjs from "emailjs-com";
 import sendEmail from "../../services/sendEmail";
 import './styles.css'
 
 export default function ContactForm() {
-  const [inputs, setInputs] = useState({});
+  const [inputs, setInputs] = useState({title:"", email:"", message:""});
 
   const handleChange = (event) => {
     const name = event.target.name;
@@ -16,7 +15,8 @@ export default function ContactForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(inputs);
-    sendEmail(event);
+    sendEmail(event, inputs, setInputs);
+    
   };
   return (
     <form action="" onSubmit={handleSubmit}>

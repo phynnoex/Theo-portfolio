@@ -5,6 +5,7 @@ import { color, motion,useScroll } from 'framer-motion';
 import './AboutSection.css';
 import Description from '../../Data/AboutMeText';
 import AboutTextParagraph from './AboutTextParagraph';
+import { Element } from 'react-scroll';
 
 
 export default function AboutSection(props) {
@@ -33,6 +34,7 @@ export default function AboutSection(props) {
 
     const {scrollYprogress} = useScroll();
     return(
+      <Element name='About'>
         <motion.div className='aboutSection'>
           <motion.div className='leftStyle'>
               <div className='leftBar'></div>
@@ -67,5 +69,6 @@ export default function AboutSection(props) {
             </div>
           </motion.div>
       </motion.div>
+      </Element>
     )
 }

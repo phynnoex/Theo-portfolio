@@ -9,11 +9,13 @@ import BalloonSection from './Sections/Balloons3d/BalloonSection';
 import MobileMenu from './Sections/MobileMenu/MobileMenu';
 import { AnimatePresence } from 'framer-motion';
 import FooterSection from './Sections/FooterSection/FooterSection';
+import ProjectSection from './Sections/ProjectSection';
 
 
 function App() {
   const [count, setCount] = useState(0)
   const [checkMenuClicked, setCheckMenuClicked] = useState(false)
+  const [toggleState, setToggleState] = useState(true);
   
   useEffect(() => {
     if (checkMenuClicked) {
@@ -32,22 +34,14 @@ function App() {
     <AnimatePresence>
       {checkMenuClicked && <MobileMenu checkMenuClicked={checkMenuClicked} setCheckMenuClicked={setCheckMenuClicked}/>}
     </AnimatePresence>
-      <NavSection checkMenuClicked={checkMenuClicked} setCheckMenuClicked={setCheckMenuClicked}/>
-      <BalloonSection></BalloonSection>
+      <NavSection checkMenuClicked={checkMenuClicked} setCheckMenuClicked={setCheckMenuClicked} toggleState={toggleState} setToggleState={setToggleState}/>
+      {toggleState && <BalloonSection></BalloonSection>}
       <div className="noie-overlay"></div>
       
       <HeroSection></HeroSection>
       <AboutSection></AboutSection>
-
-      <div className='projectsSection'>
-        {
-          projects.map((project) => {
-            console.log(project.index)
-            return <ProjectCard key= {project.index} projectTitle={project.projectTitle} AppType={project.AppType} stack={project.stack} projectDescription={project.projectDescription} Pindex={project.index} githubLink={project.githublink} siteLink={project.siteLink} displayImage={project.displayImage}/>
-          })
-          
-        }
-      </div>
+      <ProjectSection></ProjectSection>
+      
       
       <FooterSection/>
     </>

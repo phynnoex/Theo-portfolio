@@ -2,8 +2,10 @@ const public_key = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 const service_id = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const template_id = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 
+import emailjs from "emailjs-com";
 
-const sendEmail = (e) => {
+
+const sendEmail = (e, inputs, setInputs) => {
     emailjs
       .send(
         service_id,template_id,
@@ -18,6 +20,8 @@ const sendEmail = (e) => {
       .then(
         (result) => {
           alert("message sent succesfully!");
+          setInputs({title:"", email:"", message:""})
+          
         },
         (error) => {
           alert("failed to send message");

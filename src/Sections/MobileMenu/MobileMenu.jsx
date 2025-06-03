@@ -3,6 +3,7 @@ import './MobileMenu.css';
 import { delay,easeIn, motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSackXmark, faX } from '@fortawesome/free-solid-svg-icons';
+import {Link} from 'react-scroll';
 
 export default function MobileMenu({checkMenuClicked, setCheckMenuClicked}) {
 
@@ -46,9 +47,9 @@ export default function MobileMenu({checkMenuClicked, setCheckMenuClicked}) {
                 </div>
                 <div className='menuList'>
                     <ul>
-                        <li>Home</li>
-                        <li>Projects</li>
-                        <li>Contacts</li>
+                        <li><Link to="About" smooth={true} duration={500} onClick={()=>setCheckMenuClicked(false)}>About</Link></li>
+                        <li><Link to="Projects" smooth={true} duration={500} onClick={()=>setCheckMenuClicked(false)}>Projects</Link></li>
+                        <li><Link to="Contacts" smooth={true} duration={500} onClick={()=>setCheckMenuClicked(false)}>Contacts</Link></li>
                     </ul>
                 </div>
                 <div className='randomText'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet dolorum dolore .</div>

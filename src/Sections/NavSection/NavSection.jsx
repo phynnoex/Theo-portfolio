@@ -2,13 +2,16 @@ import React, { useState } from "react";
 import "./navSection.css";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { animate, delay, easeIn, motion } from "framer-motion";
+import Tooltip from "../../components/tooltip";
+import { Link } from "react-scroll";
 
-export default function NavSection({ checkMenuClicked, setCheckMenuClicked }) {
-  
+export default function NavSection({ checkMenuClicked, setCheckMenuClicked, toggleState, setToggleState }) {
   const handleMenuClick = () => {
     setCheckMenuClicked(!checkMenuClicked);
   };
-  
+  const [hoveredToggleButton, setHoveredToggleButton] = useState(false);
+
   return (
     <div className="header">
       <div className="logo">
@@ -16,20 +19,74 @@ export default function NavSection({ checkMenuClicked, setCheckMenuClicked }) {
       </div>
       <div className="menus">
         <ul>
-          <li>ABOUT</li>
-          <li>PROJECT</li>
-          <li>CONTACT</li>
+          <li>
+            <Link
+              to="About"
+              smooth={true}
+              duration={500}
+              onClick={() => setCheckMenuClicked(false)}
+            >
+              ABOUT
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="Projects"
+              smooth={true}
+              duration={500}
+              onClick={() => setCheckMenuClicked(false)}
+            >
+              PROJECTS
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="Contacts"
+              smooth={true}
+              duration={500}
+              onClick={() => setCheckMenuClicked(false)}
+            >
+              CONTACTS
+            </Link>
+          </li>
         </ul>
       </div>
       <div className="toggleLight">
-        <div className="toggleSocket">
-          <div className="toggleBall"></div>
-        </div>
+        <motion.div
+          className="toggleSocket"
+          onHoverStart={() => setHoveredToggleButton(true)}
+          onHoverEnd={() => setHoveredToggleButton(false)}
+          animate={{
+            backgroundColor: toggleState ? "rgb(58, 58, 58)" : "rgb(34, 34, 34)",
+            
+          }}
+        >
+          <motion.div className="toggleBall" onClick={
+            () => {
+              animate(
+                ".toggleBall",
+                {
+                  x: toggleState ? 0 : -33,
+                  rotate: [0, 360],
+                },
+                {
+                  duration: 0.5,
+                  ease: easeIn.easeInOut,
+                }
+              );
+              setToggleState(!toggleState);
+              document.body.classList.toggle("dark-mode");
+            }
+          }></motion.div>
+        </motion.div>
       </div>
       <div className="menu-icon" onClick={handleMenuClick}>
-        <FontAwesomeIcon icon={faBars}  
-        />
+        <FontAwesomeIcon icon={faBars} />
       </div>
+      <Tooltip
+        content=  {toggleState ? "disable interactive ball effect" : "enable interactive ball effect"}
+        hoveredToggleButton={hoveredToggleButton}
+      />
     </div>
   );
 }
