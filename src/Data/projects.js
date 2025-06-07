@@ -30,7 +30,7 @@ const projects = [
         "projectTitle": "Book Management application with chatbot",
         "index": "3",
         "AppType": "Web Application",
-        "stack": ["Javascript", "Firebase", "gemini AI"],
+        "stack": ["Javascript", "Firebase", "gemini AI", "github actions"],
        "projectDescription": "An interactive and responsive book logging app that allows users to manage their reading list with the help of a built-in chatbot. Users can add books by chatting with the assistant, which guides them through the input process. The site features a clean layout, animated UI elements, and a seamless experience across devices.",
         "githublink": "https://github.com/phynnoex/BookLogWebTrend",
         "siteLink": "https://phynnoex.github.io/BookLogWebTrend",
