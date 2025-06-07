@@ -57,25 +57,16 @@ export default function NavSection({ checkMenuClicked, setCheckMenuClicked, togg
           onHoverStart={() => setHoveredToggleButton(true)}
           onHoverEnd={() => setHoveredToggleButton(false)}
           animate={{
-            backgroundColor: toggleState ? "rgb(58, 58, 58)" : "rgb(34, 34, 34)",
+            backgroundColor: toggleState ? "rgb(87, 87, 87)" : "rgb(34, 34, 34)",
             
           }}
         >
-          <motion.div className="toggleBall" onClick={
+          <motion.div className="toggleBall"
+          animate={{x:toggleState ? 0 : -33}}
+          onClick={
             () => {
-              animate(
-                ".toggleBall",
-                {
-                  x: toggleState ? 0 : -33,
-                  rotate: [0, 360],
-                },
-                {
-                  duration: 0.5,
-                  ease: easeIn.easeInOut,
-                }
-              );
+              
               setToggleState(!toggleState);
-              document.body.classList.toggle("dark-mode");
             }
           }></motion.div>
         </motion.div>
