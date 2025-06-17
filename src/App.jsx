@@ -10,6 +10,7 @@ import MobileMenu from './Sections/MobileMenu/MobileMenu';
 import { AnimatePresence } from 'framer-motion';
 import FooterSection from './Sections/FooterSection/FooterSection';
 import ProjectSection from './Sections/ProjectSection';
+import FloatingBar from './components/FloatingBar';
 
 
 function App() {
@@ -42,7 +43,9 @@ function App() {
       <AboutSection></AboutSection>
       <ProjectSection></ProjectSection>
       
-      
+      <AnimatePresence>
+        <FloatingBar/>
+      </AnimatePresence>
       <FooterSection/>
     </>
   )

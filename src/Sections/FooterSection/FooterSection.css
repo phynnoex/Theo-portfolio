@@ -2,26 +2,53 @@
   background-color: #282828;
   height: max-content;
   width: 100%;
-  padding-top: 50px;
-  padding-top: 100px;
+  padding: 20px;
   font-family: inter;
   color: rgb(190, 190, 190);
 }
 .contentContainer {
   display: flex;
-  padding: 0px 67px;
+  justify-content: space-between;
+  font-style: italic;
+  line-height: 350%;
 }
 .leftFooter {
-    width: 50%;
+    width: 55%;
+    height: 90vh;
+    background-image: url('../../assets/ContatcUs.png');
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
 }
+.leftFooter img{
+    width: 90%;
+    height: auto;
+    /* add shadow */
+    box-shadow:  5px 6px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 20px;
+    
+}
+
 .rightFooter {
-    width: 50%;
+  width: 43%;
+  height: 90vh;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+.rightFooter h2{
+  font-size: 64px;
+  font-weight: bold;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .copyright{
   width: 100%;
   text-align: center;
-  padding: 50px 0px;
 }
 
 /* mobile */
@@ -29,6 +56,7 @@
 @media screen and (max-width: 768px){
   .footerSection{
     padding-top: 50px;
+    width: 100%;
   }
   .contentContainer{
     display: block;
@@ -36,8 +64,13 @@
   }
   .leftFooter{
     display: none;
+    
   }
   .rightFooter{
+    width: 100%;
+    padding: 0px;
+  }
+  .rightFooter h2 {
     width: 100%;
   }
   .inputField{

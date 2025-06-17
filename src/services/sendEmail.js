@@ -24,6 +24,7 @@ const sendEmail = (e, inputs, setInputs) => {
           
         },
         (error) => {
+          console.error("Failed to send message:", error);
           alert("failed to send message");
         }
       );

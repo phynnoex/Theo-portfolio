@@ -23,7 +23,7 @@ export default function ContactForm() {
       <input
         name="title"
         type="text"
-        placeholder="title"
+        placeholder="TITLE"
         className="inputField"
         value={inputs.title}
         onChange={handleChange}
@@ -31,14 +31,14 @@ export default function ContactForm() {
       <input
         name="email"
         type="email"
-        placeholder="email"
+        placeholder="EMAIL"
         className="inputField"
         value={inputs.email}
         onChange={handleChange}
       />
       <textarea
         name="message"
-        placeholder="Message"
+        placeholder="MESSAGE"
         className="messageField"
         value={inputs.message}
         onChange={handleChange}

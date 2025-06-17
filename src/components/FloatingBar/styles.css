@@ -1,0 +1,49 @@
+.floatingBar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+.floatingBarContainer{
+    width: 209px;
+    background: linear-gradient(to bottom left, rgba(78, 78, 78, 0.5), rgba(48, 48, 48, 0.2));
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3);
+    /* box-shadow: inset 0px -1px 5px 0px rgba(255, 255, 255, 0.3); */
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.floatingBarContainer a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+}
+.floatingBarContainer a:hover{
+     background: linear-gradient(to bottom, rgba(78, 78, 78, 0.3), rgba(150, 150, 150, 0.1));
+}
+.floatingBarContainer a:first-child{
+    border-radius: 10px 0px 0px 10px;
+}
+.floatingBarContainer a:last-child{
+    border-radius: 0px 10px 10px 0px;
+}
+
+/* mobile screen  */
+@media (max-width: 768px) {
+  .floatingBar {
+    display: none;
+  }
+}
