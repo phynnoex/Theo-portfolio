@@ -93,6 +93,7 @@
     border-radius: 20px;
     background-image: url('../../assets/profile-pic.jpg');
     background-size: cover;
+    background-position: center;
   }
   .randomQuotes{
     font-size: 15px;
@@ -101,6 +102,28 @@
     margin: 20px 20px;
     color: #313131;
 
+  }
+  @media screen and (max-width: 1200px){
+    .aboutSection{
+            margin-top: 90px;
+            height: max-content;
+            padding: 10px;
+        }
+    .mainAbout{
+            flex-direction: column;
+            padding: 10px;
+        }
+        .LeftMainAbout{
+            width: 100%;
+            flex-direction: column;
+            padding: 0px;
+            height: max-content;
+        }
+        .rightMainAbout{
+          width: 100%;
+          padding: 0px;
+        }
+        
   }
 
   /* mobile */

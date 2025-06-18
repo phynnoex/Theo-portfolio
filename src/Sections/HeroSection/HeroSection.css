@@ -153,3 +153,9 @@
             margin-top: 50px;
           }
     }
+@media screen and (min-width: 769px){
+  .heroSection{
+    height: max-content;
+  }
+  
+}

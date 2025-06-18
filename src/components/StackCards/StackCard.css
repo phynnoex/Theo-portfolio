@@ -16,6 +16,15 @@
     padding: 0px 0px;
 }
 
+/* tablet view */
+@media screen and (max-width: 1200px) and (min-width: 1024px){
+    .stackCard{
+        width: max-content;
+        padding: 0px 15px;
+        height: 40px;
+    }
+}
+
 /* mobile */
 
 @media screen and (max-width: 768px){
