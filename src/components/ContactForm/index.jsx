@@ -5,6 +5,7 @@ import './styles.css'
 
 export default function ContactForm() {
   const [inputs, setInputs] = useState({title:"", email:"", message:""});
+  const [errors, setErrors] = useState({});
 
   const handleChange = (event) => {
     const name = event.target.name;
@@ -14,7 +15,13 @@ export default function ContactForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(inputs);
+    const {email, title, message} = inputs;
+    const newErrors = {};
+    if(!email){ newErrors.email = "Email is required";}
+    if(!title){ newErrors.title = "Title is required";}
+    if(!message){ newErrors.message = "Message is required";}
+    setErrors(newErrors);
+    if(Object.keys(newErrors).length > 0) return;
     sendEmail(event, inputs, setInputs);
     
   };
@@ -28,6 +35,7 @@ export default function ContactForm() {
         value={inputs.title}
         onChange={handleChange}
       />
+      {errors.title && <span className="error">{errors.title}</span>}
       <input
         name="email"
         type="email"
@@ -36,6 +44,7 @@ export default function ContactForm() {
         value={inputs.email}
         onChange={handleChange}
       />
+      {errors.email && <span className="error">{errors.email}</span>}
       <textarea
         name="message"
         placeholder="MESSAGE"
@@ -43,6 +52,7 @@ export default function ContactForm() {
         value={inputs.message}
         onChange={handleChange}
       />
+      {errors.message && <span className="error">{errors.message}</span>}
       <br />
       <input type="submit" className="submitButton"/>
     </form>

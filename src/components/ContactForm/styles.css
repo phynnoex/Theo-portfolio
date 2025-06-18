@@ -15,6 +15,9 @@ form{
   justify-content: center;
   width: 100%;
 }
+form span{
+  color: rgb(176, 104, 104);
+}
 .inputField:focus,
 .messageField:focus {
   outline: none;
