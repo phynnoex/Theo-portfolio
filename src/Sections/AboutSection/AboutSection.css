@@ -103,6 +103,23 @@
     color: #313131;
 
   }
+  /* between 1200 and 1600px screen size  */
+  @media screen and (max-width: 1800px) and (min-width: 1201px){
+    .LeftMainAbout{
+      height: 600px;
+    }
+    .rightMainAbout{
+      height: 600px;
+    }
+    .aboutSection{
+            margin-top: 90px;
+            max-height: fit-content;
+            padding-bottom: 30px;
+        }
+        
+  }
+
+  /* laptop and tablets */
   @media screen and (max-width: 1200px){
     .aboutSection{
             margin-top: 90px;
