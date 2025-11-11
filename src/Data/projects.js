@@ -3,6 +3,7 @@ import laundaryDisplay from "../assets/projectDisplays/laundarySite.png";
 import patternLibraryDisplay from "../assets/projectDisplays/patternLibrary.png";
 import movieCategorizerDisplay from "../assets/projectDisplays/movieCategorizerdisplay.png"
 import bookLogDisplay from "../assets/projectDisplays/bookLogdisplay.png"
+import kohicafeDisplay from "../assets/projectDisplays/kohicafe-display.png"
 
 const projects = [
     {
@@ -45,7 +46,17 @@ const projects = [
         "githublink": "https://github.com/phynnoex/patternlibrary",
         "siteLink": "https://phynnoex.github.io/patternlibrary",
         "displayImage": patternLibraryDisplay
-    }
+    },
+    {
+        "projectTitle": "Kohicafe ecommerce site",
+        "index": "5",
+        "AppType": "Web Application",
+        "stack": ["React", "Firebase", "Typescript", "sass"],
+       "projectDescription": "A modern and responsive e-commerce website for Kohicafe, designed to provide a seamless shopping experience for customers. The site features a clean layout, intuitive navigation, and dynamic product displays. Built with React and TypeScript, it integrates Firebase for real-time inventory management and secure user authentication. Sass is used for efficient styling, ensuring a visually appealing design across all devices.",
+        "githublink": "https://github.com/phynnoex/kohiCafe",
+        "siteLink": "https://kohicafe.netlify.app",
+        "displayImage": movieCategorizerDisplay
+    },
 
 ]
 
