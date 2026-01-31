@@ -27,7 +27,7 @@ const projects = [
     },
     {
         "projectTitle": "Pattern Library/Dashboard",
-        "index": "4",
+        "index": "3",
         "AppType": "Web Application",
         "stack": ["HTML", "CSS", "D3.js", "Figma"],
         "projectDescription": "A comprehensive UI pattern library and interactive dashboard showcasing reusable design components and data visualizations. The project serves as a reference for maintaining consistent design patterns and UI elements in web applications. Built with D3.js, the dashboard includes dynamic charts and graphs for data representation, making it a useful tool for developers and designers.",
@@ -37,7 +37,7 @@ const projects = [
     },
     {
         "projectTitle": "Kohicafe ecommerce site",
-        "index": "5",
+        "index": "4",
         "AppType": "Web Application",
         "stack": ["React", "Firebase", "Typescript", "sass"],
        "projectDescription": "A modern and responsive e-commerce website for Kohicafe, designed to provide a seamless shopping experience for customers. The site features a clean layout, intuitive navigation, and dynamic product displays. Built with React and TypeScript, it integrates Firebase for real-time inventory management and secure user authentication. Sass is used for efficient styling, ensuring a visually appealing design across all devices.",
