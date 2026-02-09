@@ -10,6 +10,7 @@ export default function ProjectSection() {
         {projects.map((project) => {
           console.log(project.index);
           return (
+            <>
             <ProjectCard
               key={project.index}
               projectTitle={project.projectTitle}
@@ -21,6 +22,9 @@ export default function ProjectSection() {
               siteLink={project.siteLink}
               displayImage={project.displayImage}
             />
+            {project.index < projects.length && <hr />}
+            </>
+            
           );
         })}
       </div>

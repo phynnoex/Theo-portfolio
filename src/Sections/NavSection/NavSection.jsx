@@ -49,6 +49,21 @@ export default function NavSection({ checkMenuClicked, setCheckMenuClicked, togg
               CONTACTS
             </Link>
           </li>
+           <li className="new-menu">
+            <Link
+              
+              to="Designs"
+              smooth={true}
+              duration={500}
+              onClick={() => setCheckMenuClicked(false)}
+            >
+              DESIGNS
+              
+            </Link>
+            <div className="indicator-wrapper">
+                  <div className="indicator"></div>
+              </div>
+          </li>
         </ul>
       </div>
       <div className="toggleLight">

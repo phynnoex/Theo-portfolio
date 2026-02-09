@@ -11,6 +11,7 @@ import { AnimatePresence } from 'framer-motion';
 import FooterSection from './Sections/FooterSection/FooterSection';
 import ProjectSection from './Sections/ProjectSection';
 import FloatingBar from './components/FloatingBar';
+import DesignsSection from './Sections/DesignsSection';
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
       <HeroSection></HeroSection>
       <AboutSection></AboutSection>
       <ProjectSection></ProjectSection>
+      <DesignsSection/>
       
       <AnimatePresence>
         <FloatingBar/>

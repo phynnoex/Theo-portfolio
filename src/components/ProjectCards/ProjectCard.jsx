@@ -79,7 +79,7 @@ export default function ProjectCard(props) {  // This runs whenever 'coordinates
           </div>
         </motion.div>
       </div>
-      <hr />
+      
     </>
   );
 }
