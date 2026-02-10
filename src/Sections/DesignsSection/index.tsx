@@ -30,7 +30,7 @@ export default function DesignsSection() {
                     <div className="top-slice"></div>
                     <div className="content"></div>
                 </div>
-                <ClipSvg/>
+                <ClipSvg />
             </div>
         </Element>
 

@@ -2,9 +2,10 @@ import { Link } from "react-scroll";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
 import { motion } from 'framer-motion';
-import Contact from'../../assets/CustomIcons/phone.png';
-import Projects from'../../assets/CustomIcons/project.png';
-import About from'../../assets/CustomIcons/about.png';
+import Contact from '../../assets/CustomIcons/phone.png';
+import Projects from '../../assets/CustomIcons/project.png';
+import designs from '../../assets/CustomIcons/design.png';
+import About from '../../assets/CustomIcons/about.png';
 import "./styles.css";
 
 export default function FloatingBar({ children, className }) {
@@ -15,7 +16,7 @@ export default function FloatingBar({ children, className }) {
         setPopAnimation(true);
         console.log("Scrolled more than 20px");
         // ✅ Trigger your function here
-      }else{
+      } else {
         setPopAnimation(false);
         console.log("Scrolled less than 20px");
       }
@@ -30,37 +31,58 @@ export default function FloatingBar({ children, className }) {
   }, []);
   return (
     <>
-    {  popAnimation && 
-      <motion.div  className="floatingBar"
-      
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -50 }}
-    >
-        <div className="floatingBarContainer">
-          <Link
-            to="About"
-            smooth={true}
-            duration={500}
-          >
-            <img src={About} alt="" />
-          </Link>
-          <Link
-            to="Projects"
-            smooth={true}
-            duration={500}
-          >
-            <img src={Projects} alt="" />
-          </Link>
-          <Link
-            to="Contacts"
-            smooth={true}
-            duration={500}
-          >
-            <img src={Contact} alt="" />
-          </Link>
-        </div>
-      </motion.div >
+      {popAnimation &&
+        <motion.div className="floatingBar"
+
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -50 }}
+        >
+          <div className="floatingBarContainer">
+            <Link
+              to="About"
+              spy={true}
+              smooth={true}
+              duration={500}
+              activeClass="active"
+            >
+              <img src={About} alt="About section" />
+            </Link>
+
+            <Link
+              to="Projects"
+              spy={true}
+              smooth={true}
+              duration={500}
+              activeClass="active"
+              offset={-80}
+            >
+              <img src={Projects} alt="Projects section" />
+            </Link>
+
+            <Link
+              to="Designs"
+              spy={true}
+              smooth={true}
+              duration={500}
+              activeClass="active"
+              offset={-80}
+            >
+              <img src={designs} alt="Designs section" />
+            </Link>
+
+            <Link
+              to="Contacts"
+              spy={true}
+              smooth={true}
+              duration={500}
+              activeClass="active"
+              offset={-80}
+            >
+              <img src={Contact} alt="Contact section" />
+            </Link>
+          </div>
+        </motion.div >
       }
     </>
   );
