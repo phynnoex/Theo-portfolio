@@ -13,18 +13,17 @@ export default function FloatingBar({ children, className }) {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 20) {
-        setPopAnimation(true);
-        console.log("Scrolled more than 20px");
+        setPopAnimation(true);;
         // ✅ Trigger your function here
       } else {
         setPopAnimation(false);
-        console.log("Scrolled less than 20px");
+        ;
       }
     };
 
     window.addEventListener("scroll", handleScroll);
 
-    // 🧼 Clean up on unmount
+    //  Clean up on unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };

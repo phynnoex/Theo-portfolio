@@ -1,6 +1,7 @@
 
 import "./styles.css"
 import { Element } from 'react-scroll';
+import ThreeWrapper from "./threeWrapper";
 
 const ClipSvg = () => {
     return (
@@ -28,7 +29,9 @@ export default function DesignsSection() {
             <div className="wrapper">
                 <div className="designSectionContainer">
                     <div className="top-slice"></div>
-                    <div className="content"></div>
+                    <div className="content">
+                        <ThreeWrapper/>
+                    </div>
                 </div>
                 <ClipSvg />
             </div>
