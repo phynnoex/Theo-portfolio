@@ -1,22 +1,59 @@
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Suspense } from 'react';
+import { ThreeEvent } from '@react-three/fiber';
+import { Suspense, useRef, useState } from 'react';
+import Lottie from 'lottie-react';
+import * as animationData from '../../../assets/animationData.json';
 import {OrbitControls} from '@react-three/drei'
 import "./styles.css"
+import ArrowUp from '../../../assets/CustomIcons/arrowUp.svg?react'
 import Carousel from '../designCarousel/carousel';
 
-const images = ["images1.png", "images2.png", "images1.png", "images2.png", "images1.png"]
+const designData: { image: string, link: string, title: string, description: string }[] = [
+    { image: "designCover1.png", link: "design1", title: "Web Portfolio", description: "lorem ipsum dolor sit amet consecteur adispiscing" },
+    { image: "designCover2.png", link: "design2", title: 'FanSurvey', description: "lorem ipsum dolor sit amet consecteur adispiscing" },
+    { image: "designCover1.png", link: "design3", title: "KohiCafe", description: "lorem ipsum dolor sit amet consecteur adispiscing" },
+    { image: "designCover1.png", link: "design1", title: 'FanSurvey', description: "lorem ipsum dolor sit amet consecteur adispiscing" },
+    { image: "designCover2.png", link: "design2", title: "Web Portfolio", description: "lorem ipsum dolor sit amet consecteur adispiscing" },
+    { image: "designCover2.png", link: "design3", title: 'KohiCafe', description: "lorem ipsum dolor sit amet consecteur adispiscing" },
+    { image: "designCover1.png", link: "design1", title: "Web Portfolio", description: "lorem ipsum dolor sit amet consecteur adispiscing" },
+    { image: "designCover2.png", link: "design2", title: 'FanSurvey', description: "lorem ipsum dolor sit amet consecteur adispiscing" },
+    { image: "designCover2.png", link: "design3", title: 'KohiCafe', description: "lorem ipsum dolor sit amet consecteur adispiscing" },
+]
 
-export default function ThreeWrapper() {
+type ThreeWrapperProps= {
+    inView: boolean
+}
+
+
+export default function ThreeWrapper({inView}: ThreeWrapperProps) {
+    const divRef = useRef<HTMLDivElement>(null)
+    const [visible, setVisible] = useState(false);
+    const [displayIndex, setDisplayIndex] = useState(0);
+    const handlePointerMove = (event: ThreeEvent<PointerEvent>) => {
+        if (!divRef.current) return;
+        divRef.current.style.transform = `translate(${event.clientX}px, ${event.clientY}px)`;
+    }
+
     return (
         <div className='threeWrapper'>
-            <Canvas camera={{position:[0,0,1]}}>
+            <Canvas camera={{ position: [0, 0, 13], fov: 60 }}>
+                <ambientLight intensity={0.9} />
+                <directionalLight position={[10, 10, 10]} intensity={1} />
                 <Suspense fallback={null}>
-                    <Carousel images={images} gap={1.05} position={[-2.5, -1, 0]} />
+                    <Carousel inView={inView} handleDisplayIndex={setDisplayIndex} designObjects={designData} pointerMoveHandler={handlePointerMove} handleVisible={setVisible} />
                 </Suspense>
-                <OrbitControls/>
-                <axesHelper/>
-                <gridHelper/>
+                {/* <OrbitControls /> */}
+                <axesHelper />
+                <gridHelper />
             </Canvas>
+            {visible && <div className='tooltip' ref={divRef} >
+                <div className='tooltip_title'><div className='title_text'><span>Web Design</span>{designData[displayIndex % 2].title} </div><button></button></div>
+                <div className='tooltip_description'>{designData[displayIndex % 2].description} <div className='tooltip_button'>
+                    <div>click to view my process</div>
+                    <Lottie animationData={JSON.parse(JSON.stringify(animationData))} loop autoplay={true} style={{ height: 30, width: 30 }} />
+                </div></div>
+
+            </div>}
         </div>
     )
 

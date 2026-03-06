@@ -54,8 +54,8 @@ export default function AboutSection(props) {
                 <h3>Skills</h3>
                 <div className='skills'>
                     {
-                        skills.map((skill) => {
-                            return <SkillCard  title={skill.skillTitle} width={skill.levelOfTen/10} icon={skill.icon}/>
+                        skills.map((skill,index) => {
+                            return <SkillCard key={index}  title={skill.skillTitle} width={skill.levelOfTen/10} icon={skill.icon}/>
                         })
                     }
                 </div>

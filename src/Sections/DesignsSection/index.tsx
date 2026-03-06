@@ -1,7 +1,12 @@
 
 import "./styles.css"
+
+import { useInView } from "react-intersection-observer";
 import { Element } from 'react-scroll';
 import ThreeWrapper from "./threeWrapper";
+import { BrowserRouter } from "react-router-dom";
+import { Lenis } from "lenis/react";
+import { useEffect, useRef } from "react";
 
 const ClipSvg = () => {
     return (
@@ -23,18 +28,30 @@ const ClipSvg = () => {
     )
 }
 
+
+
+
 export default function DesignsSection() {
+
+    const [ref, inView] = useInView({ threshold: 0.5 })
+    useEffect(() => {
+        console.log(inView)
+    }, [inView])
     return (
         <Element name="Designs" >
-            <div className="wrapper">
-                <div className="designSectionContainer">
+
+            <div className="wrapper" >
+                <div className="designSectionContainer" ref={ref}>
                     <div className="top-slice"></div>
                     <div className="content">
-                        <ThreeWrapper/>
+
+                        <ThreeWrapper inView={inView} />
+
                     </div>
                 </div>
                 <ClipSvg />
             </div>
+
         </Element>
 
     )
