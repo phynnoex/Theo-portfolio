@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import HeroSection from './Sections/HeroSection/HeroSection';
-import NavSection from './Sections/NavSection/navSection';
+
 import AboutSection from './Sections/AboutSection/ABOUTsECTION.JSX';
 import projects from './Data/projects';
 import ProjectCard from './components/ProjectCards/ProjectCard';
@@ -12,12 +12,13 @@ import FooterSection from './Sections/FooterSection/FooterSection';
 import ProjectSection from './Sections/ProjectSection';
 import FloatingBar from './components/FloatingBar';
 import DesignsSection from './Sections/DesignsSection';
+import NavSection from './Sections/NavSection/NavSection';
 
 
 function App() {
   const [count, setCount] = useState(0)
   const [checkMenuClicked, setCheckMenuClicked] = useState(false)
-  const [toggleState, setToggleState] = useState(true);
+  const [toggleState, setToggleState] = useState(false);
   
   useEffect(() => {
     if (checkMenuClicked) {

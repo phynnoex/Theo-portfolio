@@ -50,6 +50,22 @@
   width: 100%;
   text-align: center;
 }
+/* tablet version */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .rightFooter h2 {
+    font-size: 48px;
+    width: 100%;
+    margin: 0px;
+    margin-top: 20px;
+    
+  }
+  .leftFooter{
+    height: 60vh;
+  }
+  .rightFooter{
+    height: 60vh;
+  }
+}
 
 /* mobile */
 

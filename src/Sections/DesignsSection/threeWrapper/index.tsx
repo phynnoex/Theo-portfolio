@@ -10,14 +10,14 @@ import Carousel from '../designCarousel/carousel';
 
 const designData: { image: string, link: string, title: string, description: string }[] = [
     { image: "designCover1.png", link: "design1", title: "Web Portfolio", description: "lorem ipsum dolor sit amet consecteur adispiscing" },
-    { image: "designCover2.png", link: "design2", title: 'FanSurvey', description: "lorem ipsum dolor sit amet consecteur adispiscing" },
-    { image: "designCover1.png", link: "design3", title: "KohiCafe", description: "lorem ipsum dolor sit amet consecteur adispiscing" },
-    { image: "designCover1.png", link: "design1", title: 'FanSurvey', description: "lorem ipsum dolor sit amet consecteur adispiscing" },
-    { image: "designCover2.png", link: "design2", title: "Web Portfolio", description: "lorem ipsum dolor sit amet consecteur adispiscing" },
-    { image: "designCover2.png", link: "design3", title: 'KohiCafe', description: "lorem ipsum dolor sit amet consecteur adispiscing" },
+    { image: "designCover2.png", link: "design2", title: 'KohiCafe', description: "lorem ipsum dolor sit amet consecteur adispiscing" },
+    { image: "designCover3.png", link: "design3", title: "FanSurvey", description: "lorem ipsum dolor sit amet consecteur adispiscing" },
+    { image: "designCover1.png", link: "design1", title: 'Web Portfolio', description: "lorem ipsum dolor sit amet consecteur adispiscing" },
+    { image: "designCover2.png", link: "design2", title: "KohiCafe", description: "lorem ipsum dolor sit amet consecteur adispiscing" },
+    { image: "designCover3.png", link: "design3", title: 'FanSurvey', description: "lorem ipsum dolor sit amet consecteur adispiscing" },
     { image: "designCover1.png", link: "design1", title: "Web Portfolio", description: "lorem ipsum dolor sit amet consecteur adispiscing" },
-    { image: "designCover2.png", link: "design2", title: 'FanSurvey', description: "lorem ipsum dolor sit amet consecteur adispiscing" },
-    { image: "designCover2.png", link: "design3", title: 'KohiCafe', description: "lorem ipsum dolor sit amet consecteur adispiscing" },
+    { image: "designCover2.png", link: "design2", title: 'KohiCafe', description: "lorem ipsum dolor sit amet consecteur adispiscing" },
+    { image: "designCover3.png", link: "design3", title: 'FanSurvey', description: "lorem ipsum dolor sit amet consecteur adispiscing" },
 ]
 
 type ThreeWrapperProps= {
@@ -47,9 +47,9 @@ export default function ThreeWrapper({inView}: ThreeWrapperProps) {
                 <gridHelper />
             </Canvas>
             {visible && <div className='tooltip' ref={divRef} >
-                <div className='tooltip_title'><div className='title_text'><span>Web Design</span>{designData[displayIndex % 2].title} </div><button></button></div>
-                <div className='tooltip_description'>{designData[displayIndex % 2].description} <div className='tooltip_button'>
-                    <div>click to view my process</div>
+                <div className='tooltip_title'><div className='title_text'><span>Web Design</span>{designData[displayIndex % 3].title} </div><button></button></div>
+                <div className='tooltip_description'>{designData[displayIndex % 3].description} <div className='tooltip_button'>
+                    <div>case studies coooking 🍳</div>
                     <Lottie animationData={JSON.parse(JSON.stringify(animationData))} loop autoplay={true} style={{ height: 30, width: 30 }} />
                 </div></div>
 

@@ -44,7 +44,7 @@ export default function DesignsSection() {
                 <div className="designSectionContainer" ref={ref}>
                     <div className="top-slice"></div>
                     <div className="content">
-
+                        <div className="section-title">Designs</div>
                         <ThreeWrapper inView={inView} />
 
                     </div>

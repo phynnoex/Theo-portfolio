@@ -67,7 +67,7 @@ export default function Carousel({ designObjects, inView, handleDisplayIndex, ha
 
     return (
         <>
-            <group ref={groupRef} rotation-y={3.142 / 1.2} position={[0, 0, 13]}>
+            <group ref={groupRef} rotation-y={3.142 / 1.2} position={[0, 0.2, 13]}>
                 {designObjects.map((img, index) => (
                     <Slide handleDisplayIndex={handleDisplayIndex} handleVisible={handleVisible} pointerHandler={pointerMoveHandler} key={index} ref={(el) => { if (el) imageRefs.current[index] = el; }} img={img.image} index={index} link={img.link} />
                 ))}

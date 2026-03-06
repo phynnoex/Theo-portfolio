@@ -49,20 +49,20 @@ export default function NavSection({ checkMenuClicked, setCheckMenuClicked, togg
               CONTACTS
             </Link>
           </li>
-           <li className="new-menu">
+          <li className="new-menu">
             <Link
-              
+
               to="Designs"
               smooth={true}
               duration={500}
               onClick={() => setCheckMenuClicked(false)}
             >
               DESIGNS
-              
+
             </Link>
             <div className="indicator-wrapper">
-                  <div className="indicator"></div>
-              </div>
+              <div className="indicator"></div>
+            </div>
           </li>
         </ul>
       </div>
@@ -71,26 +71,27 @@ export default function NavSection({ checkMenuClicked, setCheckMenuClicked, togg
           className="toggleSocket"
           onHoverStart={() => setHoveredToggleButton(true)}
           onHoverEnd={() => setHoveredToggleButton(false)}
+          onClick={
+            () => {
+
+              setToggleState(!toggleState);
+            }
+          }
           animate={{
             backgroundColor: toggleState ? "rgb(87, 87, 87)" : "rgb(34, 34, 34)",
-            
+
           }}
         >
           <motion.div className="toggleBall"
-          animate={{x:toggleState ? 0 : -33}}
-          onClick={
-            () => {
-              
-              setToggleState(!toggleState);
-            }
-          }></motion.div>
+            animate={{ x: toggleState ? 0 : -33 }}
+          ></motion.div>
         </motion.div>
       </div>
       <div className="menu-icon" onClick={handleMenuClick}>
         <FontAwesomeIcon icon={faBars} />
       </div>
       <Tooltip
-        content=  {toggleState ? "disable interactive ball effect" : "enable interactive ball effect"}
+        content={toggleState ? "disable interactive ball effect" : "enable interactive ball effect"}
         hoveredToggleButton={hoveredToggleButton}
       />
     </div>
