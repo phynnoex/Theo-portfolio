@@ -3,29 +3,29 @@ import { ThreeEvent } from '@react-three/fiber';
 import { Suspense, useRef, useState } from 'react';
 import Lottie from 'lottie-react';
 import * as animationData from '../../../assets/animationData.json';
-import {OrbitControls} from '@react-three/drei'
+import { OrbitControls } from '@react-three/drei'
 import "./styles.css"
 import ArrowUp from '../../../assets/CustomIcons/arrowUp.svg?react'
 import Carousel from '../designCarousel/carousel';
 
 const designData: { image: string, link: string, title: string, description: string }[] = [
-    { image: "designCover1.png", link: "design1", title: "Web Portfolio", description: "lorem ipsum dolor sit amet consecteur adispiscing" },
-    { image: "designCover2.png", link: "design2", title: 'KohiCafe', description: "lorem ipsum dolor sit amet consecteur adispiscing" },
-    { image: "designCover3.png", link: "design3", title: "FanSurvey", description: "lorem ipsum dolor sit amet consecteur adispiscing" },
-    { image: "designCover1.png", link: "design1", title: 'Web Portfolio', description: "lorem ipsum dolor sit amet consecteur adispiscing" },
-    { image: "designCover2.png", link: "design2", title: "KohiCafe", description: "lorem ipsum dolor sit amet consecteur adispiscing" },
-    { image: "designCover3.png", link: "design3", title: 'FanSurvey', description: "lorem ipsum dolor sit amet consecteur adispiscing" },
-    { image: "designCover1.png", link: "design1", title: "Web Portfolio", description: "lorem ipsum dolor sit amet consecteur adispiscing" },
-    { image: "designCover2.png", link: "design2", title: 'KohiCafe', description: "lorem ipsum dolor sit amet consecteur adispiscing" },
-    { image: "designCover3.png", link: "design3", title: 'FanSurvey', description: "lorem ipsum dolor sit amet consecteur adispiscing" },
+    { image: "designCover1.png", link: "design1", title: "Web Portfolio", description: "A clean and modern portfolio site showcasing web design work." },
+    { image: "designCover2.png", link: "design2", title: "KohiCafe", description: "A cozy cafe website with menu, location, and online ordering features." },
+    { image: "designCover3.png", link: "design3", title: "FanSurvey", description: "An interactive survey platform for collecting fan feedback efficiently." },
+    { image: "designCover1.png", link: "design1", title: "Web Portfolio", description: "A clean and modern portfolio site showcasing web design work." },
+    { image: "designCover2.png", link: "design2", title: "KohiCafe", description: "A cozy cafe website with menu, location, and online ordering features." },
+    { image: "designCover3.png", link: "design3", title: "FanSurvey", description: "An interactive survey platform for collecting fan feedback efficiently." },
+    { image: "designCover1.png", link: "design1", title: "Web Portfolio", description: "A clean and modern portfolio site showcasing web design work." },
+    { image: "designCover2.png", link: "design2", title: "KohiCafe", description: "A cozy cafe website with menu, location, and online ordering features." },
+    { image: "designCover3.png", link: "design3", title: "FanSurvey", description: "An interactive survey platform for collecting fan feedback efficiently." },
 ]
 
-type ThreeWrapperProps= {
+type ThreeWrapperProps = {
     inView: boolean
 }
 
 
-export default function ThreeWrapper({inView}: ThreeWrapperProps) {
+export default function ThreeWrapper({ inView }: ThreeWrapperProps) {
     const divRef = useRef<HTMLDivElement>(null)
     const [visible, setVisible] = useState(false);
     const [displayIndex, setDisplayIndex] = useState(0);
