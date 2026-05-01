@@ -39,16 +39,6 @@ export default function NavSection({ checkMenuClicked, setCheckMenuClicked, togg
               PROJECTS
             </Link>
           </li>
-          <li>
-            <Link
-              to="Contacts"
-              smooth={true}
-              duration={500}
-              onClick={() => setCheckMenuClicked(false)}
-            >
-              CONTACTS
-            </Link>
-          </li>
           <li className="new-menu">
             <Link
 
@@ -64,6 +54,17 @@ export default function NavSection({ checkMenuClicked, setCheckMenuClicked, togg
               <div className="indicator"></div>
             </div>
           </li>
+          <li>
+            <Link
+              to="Contacts"
+              smooth={true}
+              duration={500}
+              onClick={() => setCheckMenuClicked(false)}
+            >
+              CONTACTS
+            </Link>
+          </li>
+
         </ul>
       </div>
       <div className="toggleLight">

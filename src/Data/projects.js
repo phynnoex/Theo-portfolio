@@ -3,11 +3,24 @@ import laundaryDisplay from "../assets/projectDisplays/laundarySite.png";
 import patternLibraryDisplay from "../assets/projectDisplays/patternLibrary.png";
 import movieCategorizerDisplay from "../assets/projectDisplays/movieCategorizerdisplay.png";
 import kohicafeDisplay from "../assets/projectDisplays/kohicafe-display.png";
+import indumpDisplay from "../assets/projectDisplays/indump-display.png";
 
 const projects = [
   {
-    projectTitle: "Movie Categorizer",
+    projectTitle: "Social Media visual editor",
     index: "1",
+    AppType: "Web Application",
+    stack: ["Next.js", "SCSS", "Konva.js", "Gemini AI"],
+    projectDescription:
+      "A cutting-edge social media visual editor that empowers users to create stunning graphics and posts with ease. Built with Next.js for optimal performance, the editor features a user-friendly interface styled with SCSS for a modern look. Konva.js is utilized for advanced canvas manipulation, allowing users to add text, images, and shapes seamlessly. Integrated with Gemini AI, the editor offers intelligent design suggestions",
+    githublink: "https://github.com/phynnoex/indumpNext",
+    siteLink:
+      "https://indump-next-rpdj-nd3w414sm-phynnoexs-projects.vercel.app/",
+    displayImage: indumpDisplay,
+  },
+  {
+    projectTitle: "Movie Categorizer",
+    index: "2",
     AppType: "Web Application",
     stack: ["React", "Firebase", "framer-motion"],
     projectDescription:
@@ -18,7 +31,7 @@ const projects = [
   },
   {
     projectTitle: "Kohicafe ecommerce site",
-    index: "2",
+    index: "3",
     AppType: "Web Application",
     stack: ["React", "Firebase", "Typescript", "sass"],
     projectDescription:
@@ -26,17 +39,6 @@ const projects = [
     githublink: "https://github.com/phynnoex/kohiCafe",
     siteLink: "https://kohicafe.netlify.app",
     displayImage: kohicafeDisplay,
-  },
-  {
-    projectTitle: "Quiz App",
-    index: "3",
-    AppType: "Mobile Application",
-    stack: ["React-Native", "Expo", "Firebase"],
-    projectDescription:
-      "A mobile quiz application built with React Native and Expo. Users can test their knowledge on various topics through interactive multiple-choice questions. The app provides immediate feedback on selected answers and keeps track of scores. Firebase is integrated for real-time data storage, ensuring seamless user experience and progress tracking.",
-    githublink: "https://snack.expo.dev/@phynnoex/final-project-appquiz",
-    siteLink: "https://snack.expo.dev/@phynnoex/final-project-appquiz",
-    displayImage: projectDisplay,
   },
   {
     projectTitle: "Pattern Library/Dashboard",
