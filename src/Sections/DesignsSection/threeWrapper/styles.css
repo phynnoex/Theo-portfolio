@@ -5,7 +5,7 @@
     right: 0;
     bottom: 0;
     /* fill viewport */
-    width: 100vw;
+    width: 99vw;
     height: 100vh;
     pointer-events: none;
     /* optional if you want clicks to pass through */

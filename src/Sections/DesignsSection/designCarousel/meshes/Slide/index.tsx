@@ -1,7 +1,6 @@
 import { forwardRef, useEffect, useMemo, useRef } from "react"
 import * as THREE from "three"
 import { useTexture } from "@react-three/drei"
-import { useLenis } from "lenis/react"
 import vertexShader from '../../shaders/vertex.vert'
 import fragmentShader from '../../shaders/fragment.frag'
 import { useFrame, type ThreeEvent } from "@react-three/fiber"
